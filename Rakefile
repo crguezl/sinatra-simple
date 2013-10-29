@@ -25,10 +25,17 @@ task :delete do
   sh "curl -X DELETE -v localhost:9292"
 end
 
-desc "make a get /pepe request via curl"
+desc "make a get /name request via curl"
 task :getname, :name do |t,h|
-  puts h.inspect
   name = h[:name] or 'pepe'
   sh "curl -v localhost:9292/#{name}"
 end
+
+desc "make a get /name/appellido request via curl"
+task :getfullname, :name, :apellido do |t,h|
+  name = h[:name] or 'pepe'
+  apellido = h[:apellido] or 'rodriguez'
+  sh "curl -v localhost:9292/#{name}/#{apellido}"
+end
+
 
