@@ -21,7 +21,7 @@ class App < Sinatra::Base
     "hello #{name}!"
   end
 
-  get '/:name/?:apelido1?' do |name, apellido|
+  get '/:name/?:apellido?' do |name, apellido|
     "hello #{apellido}, #{name}!"
   end
 end

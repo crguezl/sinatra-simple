@@ -38,4 +38,6 @@ task :getfullname, :name, :apellido do |t,h|
   sh "curl -v localhost:9292/#{name}/#{apellido}"
 end
 
-
+task :html do
+  sh "kramdown README.md > README.html"
+end
