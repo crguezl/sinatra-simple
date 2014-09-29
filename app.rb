@@ -9,6 +9,12 @@ class App < Sinatra::Base
     'hello post!'
   end
 
+  post '/chuchu' do
+    puts params[:a]
+    puts params[:b]
+    'hello chuchu!'
+  end
+
   put '/' do
     'hello put!'
   end

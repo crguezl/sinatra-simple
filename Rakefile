@@ -10,9 +10,9 @@ task :get do
   sh "curl -v localhost:9292"
 end
 
-desc "make a post / request via curl"
+desc "make a post /chuchu request via curl"
 task :post do
-  sh "curl -X POST -v -d 'ignored data' localhost:9292"
+  sh "curl -X POST --trace - -d 'a=1&b=2' localhost:9292/chuchu"
 end
 
 desc "make a put / request via curl"
