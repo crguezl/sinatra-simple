@@ -10,9 +10,9 @@ class App < Sinatra::Base
   end
 
   post '/chuchu' do
-    puts params[:a]
-    puts params[:b]
-    'hello chuchu!'
+    puts "a = #{params[:a]}"
+    puts "b = #{params[:b]}"
+    "hello chuchu! a = #{params[:a]} b = #{params[:b]}"
   end
 
   put '/' do

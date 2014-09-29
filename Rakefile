@@ -10,9 +10,16 @@ task :get do
   sh "curl -v localhost:9292"
 end
 
+desc "make a post / request via curl"
+task :postroot do
+  sh "curl -X POST -v -d 'ignored data' localhost:9292"
+end
+
 desc "make a post /chuchu request via curl"
 task :post do
-  sh "curl -X POST --trace - -d 'a=1&b=2' localhost:9292/chuchu"
+  sh "curl -X POST --trace - -d 'a=Casiano+Rodriguez&b=a+%2B+b+%3D%3D+13%25' localhost:9292/chuchu"
+#a = Casiano Rodriguez
+#b = a + b == 13%
 end
 
 desc "make a put / request via curl"
