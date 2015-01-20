@@ -48,3 +48,8 @@ end
 task :html do
   sh "kramdown README.md > README.html"
 end
+
+desc "debug sinatra/base"
+task :debug do
+  sh "bundle exec ruby hi.rb"
+end
