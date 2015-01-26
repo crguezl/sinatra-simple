@@ -33,3 +33,7 @@ accessible via the `params[:splat]` array:
               # matches /download/path/to/file.xml
               params[:splat] # => ["path/to/file", "xml"]
             end
+
+## See also
+
+* [GitHub page](http://crguezl.github.io/sinatra-simple/)
