@@ -31,7 +31,30 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3><a href="README.html">README.html</a></h3>
+
+<h1 id="routes">Routes</h1>
+
+<p>In Sinatra, a route is an HTTP method paired with a URL-matching
+pattern. Each route is associated with a block</p>
+
+<p>Routes are matched in the order they are defined. The first route
+that matches the request is invoked.</p>
+
+<p>Route patterns may include named parameters, accessible via the params hash:</p>
+
+<pre><code>        get '/hello/:name' do
+          # matches "GET /hello/foo" and "GET /hello/bar"
+          # params[:name] is 'foo' or 'bar'
+          "Hello #{params[:name]}!"
+        end
+</code></pre>
+
+<p>or:</p>
+
+<pre><code>        get '/:name' do |name|
+          "hello #{name}!"
+        end
+</code></pre>
       </section>
     </div>
 
